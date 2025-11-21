@@ -1,0 +1,31 @@
+<section class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="fade-in-on-scroll">
+        <h1 class="text-5xl font-extrabold text-center text-gray-800 mb-4">Disorders Library</h1>
+        <p class="text-xl text-center text-gray-600 mb-10">A trusted, searchable resource on speech, language, and hearing conditions.</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-3xl shadow-xl mb-12 fade-in-on-scroll" data-delay="100">
+        <input type="text" id="disorderSearch" placeholder="Search by disorder name (e.g., Stuttering, Aphasia, BERA)" 
+               class="w-full p-4 border border-gray-200 rounded-xl focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition duration-300">
+        </div>
+
+    <div id="disorderGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <a href="/disorders/aphasia.html" class="disorder-card p-6 bg-white rounded-2xl shadow-lg border-t-4 border-blue-600 
+                                                hover:shadow-xl hover:border-blue-700 transition duration-300 transform hover:-translate-y-1 
+                                                fade-in-on-scroll" data-delay="200">
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">Aphasia</h3>
+            <p class="text-blue-600 font-semibold mb-3">Speech & Language</p>
+            <p class="text-gray-600 line-clamp-3">A communication disorder that results from damage to the parts of the brain that contain language, causing difficulties with speaking, reading, writing, and understanding.</p>
+            <div class="mt-4 text-sm font-medium text-gray-500">Target Audience: Adults, Geriatric</div>
+        </a>
+        
+        <a href="/disorders/delayed-speech.html" class="disorder-card p-6 bg-white rounded-2xl shadow-lg border-t-4 border-yellow-400 
+                                                hover:shadow-xl hover:border-yellow-500 transition duration-300 transform hover:-translate-y-1 
+                                                fade-in-on-scroll" data-delay="300">
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">Delayed Speech</h3>
+            <p class="text-yellow-600 font-semibold mb-3">Pediatric</p>
+            <p class="text-gray-600 line-clamp-3">Occurs when a child misses the normal developmental milestones for speech and language compared to their peers.</p>
+            <div class="mt-4 text-sm font-medium text-gray-500">Target Audience: Parents, Children</div>
+        </a>
+        </div>
+</section>
