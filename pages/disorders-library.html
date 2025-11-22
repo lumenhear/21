@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disorders Library | LUMEN Speech & Hearing Care</title>
+    <meta name="description" content="Search our extensive library of Speech-Language and Audiology Disorders. Detailed information on Aphasia, Stuttering, Hearing Loss, and more.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { 'calm-blue': '#3B82F6', 'dark-blue': '#1e40af', 'soft-gray': '#f3f4f6', 'yellow-icon': '#FBBF24', } } }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .fade-in-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="text-gray-800 bg-white">
+    
+    <header class="sticky top-0 z-50 bg-white shadow-lg/50 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center space-x-2 text-xl font-bold text-dark-blue">
+                <svg class="w-8 h-8 text-yellow-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm-2-7h6V8h-6v2z"/></svg>
+                <span>LUMEN Speech & Hearing Care</span>
+            </a>
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="tel:+919350158754" class="text-dark-blue hover:text-calm-blue font-semibold transition">📞 +91 9350158754</a>
+                <a href="mailto:lumenhearingcare@gmail.com" class="text-dark-blue hover:text-calm-blue font-semibold transition">📧 Email Us</a>
+                <a href="contact.html" class="px-4 py-2 bg-calm-blue text-white rounded-lg shadow-md hover:bg-dark-blue transition duration-300">Book Appointment</a>
+            </div>
+            <button class="lg:hidden p-2 rounded-md hover:bg-soft-gray">☰</button>
+        </div>
+        
+        <nav class="hidden lg:block bg-soft-gray/50 border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <ul class="flex space-x-8">
+                    <li><a href="../index.html" class="py-3 px-1 block text-gray-600 hover:text-dark-blue hover:border-b-2 hover:border-dark-blue transition">Home</a></li>
+                    <li><a href="about.html" class="py-3 px-1 block text-gray-600 hover:text-dark-blue hover:border-b-2 hover:border-dark-blue transition">About</a></li>
+                    <li><a href="services.html" class="py-3 px-1 block text-gray-600 hover:text-dark-blue hover:border-b-2 hover:border-dark-blue transition">Services</a></li>
+                    <li><a href="disorders-library.html" class="py-3 px-1 block text-dark-blue border-b-2 border-calm-blue font-semibold">Disorders Library</a></li>
+                    <li><a href="blog.html" class="py-3 px-1 block text-gray-600 hover:text-dark-blue hover:border-b-2 hover:border-dark-blue transition">Blog</a></li>
+                    <li><a href="contact.html" class="py-3 px-1 block text-gray-600 hover:text-dark-blue hover:border-b-2 hover:border-dark-blue transition">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="bg-calm-blue/10 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl lg:text-5xl font-extrabold text-dark-blue mb-4 fade-in-scroll">
+                The LUMEN Disorders Library
+            </h1>
+            <p class="text-xl text-gray-600 mb-8 fade-in-scroll" style="transition-delay: 0.1s;">
+                A large searchable directory of over 50 communication and hearing conditions.
+            </p>
+
+            <div class="max-w-xl mx-auto fade-in-scroll" style="transition-delay: 0.2s;">
+                <input type="text" id="disorderSearch" onkeyup="filterDisorders()" placeholder="Search for Aphasia, Stuttering, Hearing Loss, etc..." 
+                       class="w-full px-6 py-4 border-2 border-calm-blue rounded-full shadow-lg focus:ring-dark-blue focus:border-dark-blue transition">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-dark-blue mb-8 fade-in-scroll">
+                Quick Access Index
+            </h2>
+
+            <div id="disordersGrid" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                
+                <a href="disorders/aphasia.html" class="disorder-card bg-soft-gray p-5 rounded-xl shadow-md hover:shadow-xl hover:scale-[1.01] transition duration-300 transform fade-in-scroll" data-name="Aphasia">
+                    <p class="text-sm font-semibold text-calm-blue mb-1">Language</p>
+                    <h3 class="text-xl font-bold text-dark-blue">Aphasia</h3>
+                    <p class="text-sm text-gray-600 mt-2">Difficulty in speaking or understanding language after stroke or injury.</p>
+                </a>
+
+                <a href="disorders/stuttering.html" class="disorder-card bg-soft-gray p-5 rounded-xl shadow-md hover:shadow-xl hover:scale-[1.01] transition duration-300 transform fade-in-scroll" data-name="Stuttering">
+                    <p class="text-sm font-semibold text-calm-blue mb-1">Fluency</p>
+                    <h3 class="text-xl font-bold text-dark-blue">Stuttering / Stammering</h3>
+                    <p class="text-sm text-gray-600 mt-2">Repetitions, prolongations, or blocks interrupting the flow of speech.</p>
+                </a>
+                
+                <a href="disorders/hearing-loss.html" class="disorder-card bg-soft-gray p-5 rounded-xl shadow-md hover:shadow-xl hover:scale-[1.01] transition duration-300 transform fade-in-scroll" data-name="Hearing Loss">
+                    <p class="text-sm font-semibold text-calm-blue mb-1">Audiology</p>
+                    <h3 class="text-xl font-bold text-dark-blue">Hearing Loss (All Types)</h3>
+                    <p class="text-sm text-gray-600 mt-2">Comprehensive guide to Conductive, Sensorineural, and Mixed loss.</p>
+                </a>
+                
+                <a href="disorders/misarticulation.html" class="disorder-card bg-soft-gray p-5 rounded-xl shadow-md hover:shadow-xl hover:scale-[1.01] transition duration-300 transform fade-in-scroll" data-name="Misarticulation">
+                    <p class="text-sm font-semibold text-calm-blue mb-1">Articulation</p>
+                    <h3 class="text-xl font-bold text-dark-blue">Misarticulation / SSD</h3>
+                    <p class="text-sm text-gray-600 mt-2">Difficulty producing speech sounds accurately (e.g., lisping, sound substitution).</p>
+                </a>
+                
+                </div>
+            
+            <p id="noResults" class="text-center text-xl text-gray-500 mt-12 hidden">No results found for your search term.</p>
+
+        </div>
+    </section>
+
+    <footer class="bg-dark-blue text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div><h4 class="text-xl font-bold mb-4 flex items-center space-x-2">
+                        <svg class="w-6 h-6 text-yellow-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm-2-7h6V8h-6v2z"/></svg>
+                        <span>LUMEN</span>
+                    </h4><p class="text-sm">RCI Registered Audiology & Speech Therapy.</p>
+                    <ul class="mt-4 space-y-2 text-sm"><li>📞 <a href="tel:+919350158754" class="hover:text-calm-blue transition">+91 9350158754</a></li><li>📧 <a href="mailto:lumenhearingcare@gmail.com" class="hover:text-calm-blue transition">lumenhearingcare@gmail.com</a></li></ul>
+                </div>
+                <div><h4 class="font-semibold mb-4 text-calm-blue">Quick Links</h4>
+                    <ul class="space-y-2 text-sm"><li><a href="about.html" class="hover:text-calm-blue transition">About Us</a></li><li><a href="services.html" class="hover:text-calm-blue transition">Our Services</a></li><li><a href="disorders-library.html" class="hover:text-calm-blue transition">Disorders Library</a></li><li><a href="blog.html" class="hover:text-calm-blue transition">Blog</a></li></ul>
+                </div>
+                <div><h4 class="font-semibold mb-4 text-calm-blue">Popular Services</h4>
+                    <ul class="space-y-2 text-sm"><li><a href="services.html#stuttering" class="hover:text-calm-blue transition">Stuttering Therapy</a></li><li><a href="services.html#hearing-aid" class="hover:text-calm-blue transition">Hearing Aid Fitting</a></li><li><a href="services.html#audiometry" class="hover:text-calm-blue transition">PTA/BERA Test</a></li><li><a href="services.html#developmental" class="hover:text-calm-blue transition">Delayed Speech</a></li></ul>
+                </div>
+                <div><h4 class="font-semibold mb-4 text-calm-blue">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com/lumenhearingcare" target="_blank" class="text-white hover:text-calm-blue transition duration-300 transform hover:scale-110">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.013 4.85.074 1.258.063 1.916.206 2.441.405.517.203.957.477 1.373.894.417.417.691.857.894 1.373.199.525.342 1.183.405 2.441.061 1.266.074 1.646.074 4.85s-.013 3.584-.074 4.85c-.063 1.258-.206 1.916-.405 2.441-.203.517-.477.957-.894 1.373-.417.417-.857.691-1.373.894-.525.199-1.183.342-2.441.405-1.266.061-1.646.074-4.85.074s-3.584-.013-4.85-.074c-1.258-.063-1.916-.206-2.441-.405-.517-.203-.957-.477-1.373-.894-.417-.417-.691-.857-.894-1.373-.199-.525-.342-1.183-.405-2.441-.061-1.266-.074-1.646-.074-4.85s.013-3.584.074-4.85c.063-1.258.206-1.916.405-2.441.203-.517.477-.957.894-1.373.417-.417.857-.691 1.373-.894.525-.199 1.183-.342 2.441-.405C8.416 2.176 8.796 2.163 12 2.163zm0 3.868c-3.323 0-6.02 2.697-6.02 6.02s2.697 6.02 6.02 6.02 6.02-2.697 6.02-6.02-2.697-6.02-6.02-6.02zm0 10.353c-2.404 0-4.36-1.956-4.36-4.36s1.956-4.36 4.36-4.36 4.36 1.956 4.36 4.36-1.956 4.36-4.36 4.36zm4.512-9.673c-.452 0-.817-.365-.817-.817s.365-.817.817-.817.817.365.817.817-.365.817-.817.817z"/></svg>
+                        </a>
+                        <a href="https://wa.me/919350158754" target="_blank" class="text-white hover:text-calm-blue transition duration-300 transform hover:scale-110">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 3.18 1.44 5.99 3.71 7.85l-.75 2.89 3-1.07A9.95 9.95 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm3.17 14.18c-.28.27-1.63.7-3.17.7-1.54 0-2.89-.43-3.17-.7-.36-.35-.63-.99-.63-1.57V9.75c0-.58.27-1.22.63-1.57.28-.27 1.63-.7 3.17-.7 1.54 0 2.89.43 3.17.7.36.35.63.99.63 1.57v2.86c0 .58-.27 1.22-.63 1.57z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-6 border-t border-gray-700 text-center text-sm">
+                <p>&copy; 2025 LUMEN Speech & Hearing Care. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Search/Filter Functionality ---
+        function filterDisorders() {
+            const input = document.getElementById('disorderSearch');
+            const filter = input.value.toUpperCase();
+            const grid = document.getElementById('disordersGrid');
+            const cards = grid.getElementsByClassName('disorder-card');
+            let found = false;
+
+            for (let i = 0; i < cards.length; i++) {
+                const name = cards[i].getAttribute('data-name');
+                if (name) {
+                    if (name.toUpperCase().indexOf(filter) > -1) {
+                        cards[i].style.display = "";
+                        found = true;
+                    } else {
+                        cards[i].style.display = "none";
+                    }
+                }
+            }
+            
+            // Show/hide no results message
+            document.getElementById('noResults').classList.toggle('hidden', found);
+        }
+
+        // --- Fade-in Scroll Animation Script ---
+        const faders = document.querySelectorAll('.fade-in-scroll');
+        const appearOptions = { threshold: 0, rootMargin: "0px 0px -100px 0px" };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) { return; }
+                entry.target.classList.add('visible');
+                appearOnScroll.unobserve(entry.target);
+            });
+        }, appearOptions);
+        faders.forEach(fader => { appearOnScroll.observe(fader); });
+    </script>
+</body>
+</html>
